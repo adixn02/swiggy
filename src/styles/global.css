@@ -1,0 +1,102 @@
+*{
+    --main-color:rgb(254, 80, 5);
+    font-family: "Parkinsans", serif;
+}
+/* utility */
+.greencolor{
+    color: rgb(38, 164, 115);
+}
+.header{
+    background-color: var(--main-color);
+}
+
+.search-btn{
+    background-color: var(--main-color);
+}
+.search-btn:hover{
+    background-color:rgba(254, 80, 5, 0.63);
+}
+
+
+/* shimer and restaurent */
+.shimmer-list ,.restro-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 10px;
+    width: 90%;
+    max-width: 1100px;
+    margin: 20px auto;
+    align-items: stretch;
+}
+
+.shimmer-card,.card {
+    width: 100%;
+    height: auto;
+    background: #f0f0f0;
+    border-radius: 8px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+  justify-content: space-between;
+    height: 360px;
+
+}
+
+.shimmer-img,.card_img {
+    width: 100%;
+    height: 190px;
+    background: linear-gradient(90deg, #ececec 25%, #f4f4f4 50%, #ececec 75%);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+    border-radius: 8px;
+}
+.restrocuisne,.restrolocation{
+    font-size: 13px;
+}
+/* restaurent menu */
+.menuItems{
+    width: 100px;
+}
+
+.footer{
+    background-color: var(--main-color);
+}
+
+/* about page */
+.aboutburger{
+    width: 100%;}
+.achieve{
+    border-right: 1px solid gray;
+}
+/* contact us page */
+.contactexecuivelogo{
+    width: 100%;
+}
+.retaurentMenu{
+    max-width: 1000px;
+    width: 90%;
+    margin: auto;
+}
+.aboutRestro{
+    background-color: #ececec;
+ border-radius: 15px;
+}
+.aboutRestroImg{
+    height: 200px;
+}
+
+.menuCardbox{
+width: 60%;
+margin: auto;
+border-radius: 10px;
+background-color: #ececec;
+
+}
+
+@media  (max-width:768px) {
+    .menuCardbox{width: 90%};
+}
+
+
+
+
