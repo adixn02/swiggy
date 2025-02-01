@@ -93,7 +93,7 @@ background-color: #ececec;
 
 }
 .cartImage{
-    width: 40%;
+height: 200px;
 }
 
 @media  (max-width:768px) {

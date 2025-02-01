@@ -1,10 +1,16 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
+import { useDispatch } from 'react-redux'
+import { clearCart } from '../utils/slices/cartslice'
 const Cart = ()=>{
 const cartItems = useSelector(store => store.cart.items)
 // Calculate total price
 const total = cartItems.reduce((sum, item) => sum + item.price || item.defaultPrice, 0) / 100;
 
+const dispatch = useDispatch()
+const handleClearcart = ()=>{
+    dispatch(clearCart())
+}
 
     return (
    <>
@@ -23,7 +29,10 @@ const total = cartItems.reduce((sum, item) => sum + item.price || item.defaultPr
             ))
       }
       <div className='text-center'>
-          <h1>Total - {total}</h1></div>
+        <button className='btn btn-danger' onClick={()=>handleClearcart()}>Clear Cart</button>
+          <h1>Total - {total}</h1>
+        </div>
+        
    </>
         
        
